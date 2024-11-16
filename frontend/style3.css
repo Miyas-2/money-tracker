@@ -1,0 +1,294 @@
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling on all screen sizes */
+}
+
+.profile-photo-container {
+    transition: transform 0.3s ease;
+}
+
+.profile-photo-container:hover {
+    transform: scale(1.05);
+}
+
+.profile-photo-container label {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-photo-container label:hover {
+    background-color: #0056b3 !important;
+}
+
+.bg-gradient-danger {
+    background: linear-gradient(to right, #dc3545, #dc3545e6);
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+}
+
+header {
+    position: fixed;
+    /* Fix the header at the top */
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #4723d9;
+    /* Background color for the header */
+    z-index: 200;
+    /* Ensure it appears above other content */
+    display: flex;
+    /* Use flexbox for positioning */
+    justify-content: flex-end;
+    height: 50px;
+    /* Reduce the height of the header */
+    padding: 5px 10px;
+    /* Adjust padding to make it slimmer */
+}
+
+.custom-bg-blue1 {
+    background-color: #bfd7ed;
+    /* Red with 50% opacity */
+}
+
+.custom-bg-blue2 {
+    background-color: #3d85ff;
+    /* Red with 50% opacity */
+}
+
+.custom-bg-blue3 {
+    background-color: #0029a3;
+    /* Red with 50% opacity */
+}
+
+.custom-bg-blue4 {
+    background-color: #7ebbfc;
+    /* Red with 50% opacity */
+}
+
+.sidebar {
+    position: fixed;
+    width: 250px;
+    /* Set your desired width */
+    transition: width 0.5s ease, transform 0.5s ease;
+    /* Smooth transition for width and transform changes */
+    transform: translateX(0);
+    /* Initial position */
+}
+
+
+
+/* Large screens */
+@media (min-width: 992px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        padding: 48px 0 0;
+        /* Padding for content */
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+        width: 200px;
+        /* Full width on large screens */
+        display: flex;
+        /* Enable flexbox */
+        flex-direction: column;
+        /* Stack items vertically */
+    }
+
+    .nav-pills {
+        flex: 1;
+        /* Allow nav to grow and take available space */
+        display: flex;
+        /* Ensure buttons stack vertically */
+        flex-direction: column;
+        /* Stack buttons vertically */
+        padding-bottom: 5px;
+        /* Remove default padding if needed */
+    }
+
+    .nav-pills .nav-link {
+        padding: 10px;
+        margin-top: 5px;
+        margin-left: 13px;
+        text-align: left;
+        border-radius: 0;
+        color: white;
+        /* Warna teks putih */
+        transition: all 0.3s ease;
+        /* Transisi smooth */
+    }
+
+    .nav-pills .nav-link:hover {
+        color: rgba(255, 255, 255, 0.8);
+        /* Warna teks putih saat hover dengan opacity */
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Efek hover ringan */
+    }
+
+    .nav-pills .nav-link.active {
+        color: rgba(255, 255, 255, 0.9);
+        /* Warna putih dengan opacity rendah saat active */
+        background-color: rgba(255, 255, 255, 0.2);
+        /* Background ringan saat active */
+    }
+
+    .nav-pills .nav-link i {
+        width: 20px;
+        text-align: center;
+        margin-right: 10px;
+        color: white;
+        /* Pastikan ikon berwarna putih */
+    }
+
+    .nav-pills .nav-link.active i {
+        color: rgba(255, 255, 255, 0.9);
+        /* Ikon juga dengan opacity rendah saat active */
+    }
+
+    .nav-pills .settings-button {
+        margin-top: auto;
+        /* Pushes the settings button to the bottom */
+        color: white;
+        /* Warna putih untuk tombol pengaturan */
+    }
+
+    .main-content {
+        margin-left: 250px;
+        /* Adjust width to account for sidebar */
+        width: calc(100% - 250px);
+        /* Full width minus sidebar width */
+        padding: 20px;
+        /* Padding for the content */
+        transition: margin-left 0.3s, width 0.3s;
+        /* Smooth transition for margin and width */
+    }
+
+    .tab-content {
+        position: relative;
+        /* Position relative for tab content */
+
+        /* Ensure it appears above other content */
+    }
+}
+
+/* Small and medium screens */
+@media (max-width: 991.98px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 190px;
+        height: 100vh;
+        padding: 48px 0 0;
+        /* Warna primary-subtle */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-pills {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        overflow-y: auto;
+        margin: 5px 0;
+        padding-bottom: 5px;
+        /* Space for settings button */
+    }
+
+    .nav-pills .nav-link {
+        padding: 10px;
+        margin-top: 5px;
+        margin-left: 15px;
+        text-align: left;
+        border-radius: 0;
+        color: white;
+        /* Warna teks putih */
+        transition: all 0.3s ease;
+        /* Transisi smooth */
+    }
+
+    .nav-pills .nav-link:hover {
+        color: rgba(255, 255, 255, 0.8);
+        /* Warna teks putih saat hover dengan opacity */
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Efek hover ringan */
+    }
+
+    .nav-pills .nav-link.active {
+        color: white;
+        /* Warna teks putih saat active */
+        background-color: rgba(255, 255, 255, 0.2);
+        /* Background ringan saat active */
+    }
+
+    .nav-pills .nav-link i {
+        width: 20px;
+        text-align: center;
+        margin-right: 10px;
+        color: white;
+        /* Pastikan ikon berwarna putih */
+    }
+
+    .nav-pills .nav-link.active i {
+        color: white;
+        /* Ikon warna putih saat active */
+    }
+
+    /* Styles for the settings button */
+    .nav-pills .settings-button {
+        margin-top: auto;
+        /* Pushes the settings button to the bottom */
+        color: white;
+        /* Warna putih untuk tombol pengaturan */
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 48px;
+        padding: 20px;
+    }
+}
+
+/* Collapsed sidebar styles */
+.sidebar.collapsed {
+    width: 60px;
+    /* Width when collapsed */
+}
+
+.sidebar.collapsed .nav-link span {
+    display: none;
+    /* Hide text when collapsed */
+}
+
+.sidebar.collapsed .nav-link {
+    justify-content: center;
+    /* Center icons when collapsed */
+}
+
+.sidebar.collapsed .logo-text {
+    display: none;
+    /* Hide the text when sidebar is collapsed */
+}
+
+.sidebar.collapsed h5 {
+    justify-content: center;
+    /* Center the icon when collapsed */
+}
+
+.sidebar.collapsed~.main-content {
+    margin-left: 60px;
+    /* Adjust margin when sidebar is collapsed */
+    width: calc(100% - 60px);
+    /* Adjust width when sidebar is collapsed */
+}
+
+.settings-button {
+    margin-top: auto;
+    /* Push the Settings button to the bottom */
+}
+
